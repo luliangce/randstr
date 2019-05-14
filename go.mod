@@ -1,3 +1,3 @@
-module github/luliangce/randstr
+module github.com/luliangce/randstr
 
 go 1.12
