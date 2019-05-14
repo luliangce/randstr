@@ -5,6 +5,10 @@ import (
 	"time"
 )
 
+func init() {
+	SetSeed(time.Now().Unix())
+}
+
 const letter = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 const number = "0123456789"
 const symbol = `!@#$%^&*()-+=,./;'[]\<>?:"{}|`
@@ -60,7 +64,6 @@ func (c *Config) Disablesymbol() *Config {
 }
 
 func (c *Config) String() (ret string) {
-	SetSeed(time.Now().Unix())
 	var available string
 	if c.letter {
 		available += letter
